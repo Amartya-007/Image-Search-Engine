@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, "Courier New", Courier, monospace;
+}
+
+body {
+  background: #500ff5;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin: 100px auto 50px;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  height: 90px;
+  padding: 10px;
+  background: #434989;
+  display: flex;
+  border-radius: 15px;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+  flex: 1;
+  height: 100%;
+  padding: 0 30px;
+  font-size: 1.3rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+button {
+  height: 100%;
+  padding: 10px 20px;
+  background: #500ff5;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background: #771e95;
+  transform: scale(1.05);
+}
+
+::placeholder {
+  color: #fff;
+}
+
+#show-more-btn {
+  display: none;
+  margin: 20px auto 100px;
+  padding: 10px 20px;
+  background: #220076;
+  color: #fff;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 15px;
+  outline: 0;
+  height: 50px;
+  width: 20%;
+}
+
+#show-more-btn:hover {
+  background: #3a0e5f;
+  transform: scale(1.05);
+}
+
+/* Styling for the image results */
+#search-result {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 300px;
+  gap: 20px;
+}
+
+#search-result img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+#search-result img:hover {
+  transform: scale(1.05);
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+
+  form {
+    height: 70px; /* Reduce form height */
+  }
+
+  form input {
+    font-size: 1rem; /* Adjust font size for input */
+  }
+
+  button {
+    padding: 8px 16px; /* Reduce button padding */
+    font-size: 1rem; /* Adjust button font size */
+  }
+
+  #show-more-btn {
+    font-size: 1rem; /* Adjust font size for button */
+    width: 40%; /* Increase width for better usability on small screens */
+  }
+
+  #search-result {
+    grid-auto-rows: 250px; /* Adjust grid row height */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    margin: 50px auto 30px; /* Reduce margin for smaller screens */
+  }
+
+  form {
+    flex-direction: column; /* Stack input and button vertically */
+    height: auto; /* Remove fixed height */
+  }
+
+  form input {
+    margin-bottom: 10px; /* Add margin between input and button */
+  }
+
+  button {
+    margin-left: 0; /* Remove margin */
+    width: 100%; /* Full width button */
+  }
+
+  #show-more-btn {
+    width: 80%; /* Increase width for better usability on very small screens */
+    height: 45px; /* Adjust height for smaller screens */
+  }
+
+  #search-result {
+    grid-auto-rows: 200px; /* Adjust grid row height */
+  }
+}
+
+/* Existing styles... */
+
+#save-info {
+  text-align: center;
+  margin: 28px auto; /* Adjusted margin to fit better between title and search bar */
+  font-size: 1rem; /* Font size */
+  color: #fff;
+  font-weight: 600;
+  padding: 4px 5px; /* Padding for spacing */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  max-width: 40%; /* Maximum width */
+  background: #434989; /* Background color */
+  width: auto; /* Width adjusted for content */
+  height: 10%; /* Fixed height */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+@media (max-width: 768px) {
+  #save-info {
+    font-size: 0.85rem; /* Adjust font size for smaller screens */
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  #save-info {
+    font-size: 0.8rem; /* Adjust font size for very small screens */
+    width: 90%;
+  }
+}
